@@ -1,4 +1,4 @@
-FROM ubuntu:22.04
+FROM centos:centos7.6.1810
 
 RUN mkdir /tools
 WORKDIR /tools
