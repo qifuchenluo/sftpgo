@@ -2,6 +2,7 @@ FROM centos:centos7.6.1810
 
 RUN mkdir /tools
 WORKDIR /tools
+RUN yum install -y wget 
 RUN wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
 #Install default services
 RUN yum install -y wget git gcc bzip2 fontconfig python3 java-1.8.0-openjdk-devel.x86_64
