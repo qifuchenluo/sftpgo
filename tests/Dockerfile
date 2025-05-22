@@ -22,7 +22,7 @@ ENV MAVEN_OPTS "-Xmx2048m -XX:MaxPermSize=512m"
 RUN mkdir -p /scripts
 
 RUN echo '#!/bin/bash' > /scripts/mvn.sh
-RUN echo 'set -x; exec \"\$@\" ' >> /scripts/mvn.sh
+RUN echo 'set -x; exec "$@" ' >> /scripts/mvn.sh
 
 RUN chmod -R 777 /scripts
 RUN chmod -R 777 /tools
