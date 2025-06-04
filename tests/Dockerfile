@@ -17,7 +17,7 @@ RUN tar xfz apache-maven-3.9.4-bin.tar.gz
 RUN ln -sf /tools/apache-maven-3.9.4 /tools/maven
 
 ENV  PATH /tools/maven/bin:$PATH
-ENV MAVEN_OPTS "-Xmx2048m -XX:MaxPermSize=512m"
+ENV MAVEN_OPTS "-Xmx2048m -XX:MaxPermSize=512m -Drat.skip=true"
 
 RUN mkdir -p /scripts
 
